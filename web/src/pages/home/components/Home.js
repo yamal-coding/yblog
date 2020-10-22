@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import PostPreview from './PostDetail';
+import PostPreview from './PostPreview';
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
