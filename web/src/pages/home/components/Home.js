@@ -1,16 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import PostPreview from './PostPreview';
+import data from '../../../common/mock/MockedPosts.json'
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
   
     function fetchPosts() {
-      setPosts([
-        {id: 1, title: "First post", description: "First description"},
-        {id: 2, title: "Second post", description: "Second description"},
-        {id: 3, title: "Third post", description: "Third description"}
-      ]);
+      setPosts(data);
     } 
   
     return <div>
