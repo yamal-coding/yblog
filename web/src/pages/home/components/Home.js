@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import PostPreview from './PostPreview';
 import data from '../../../common/mock/MockedPosts.json'
 

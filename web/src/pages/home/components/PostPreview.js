@@ -12,3 +12,4 @@ const PostPreview = ({id, title, description}) => {
 
 
   export default PostPreview;
+  
