@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '../../../common/components/Box';
 
 const PostDetail = (props) => {
-  return <Box>
-    <h1>This is the detail of the post with id {props.match.params.id}</h1>
-  </Box>;
+  const [post, setPost] = useState(null)
+
+  useEffect(() => {
+    setPost({
+      id: props.match.params.id,
+      title: "Mocked title",
+      description: "Mocked description"
+    })
+  }, [props.match.params.id]);
+
+  if (post) {
+    return <Box>
+      <h2>{post.title} (id {post.id})</h2>
+      <p>{post.description}</p>
+    </Box>;
+  } else {
+    return <div>Loading...</div>
+  }
 }
 
 export default PostDetail;
