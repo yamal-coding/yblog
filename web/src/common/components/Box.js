@@ -6,7 +6,8 @@ const useStyles = createUseStyles({
         border: '2px black solid',
         margin: '5px',
         padding: '5px',
-        background: '#63C5DA'
+        background: '#63C5DA',
+        borderRadius: '5px'
     }
 });
 

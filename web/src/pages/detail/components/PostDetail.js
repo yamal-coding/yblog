@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Box from '../../../common/components/Box';
 
-const PostDetail = (props) => {
+const PostDetail = ({id}) => {
   const [post, setPost] = useState(null)
 
   useEffect(() => {
     setPost({
-      id: props.match.params.id,
+      id: id,
       title: "Mocked title",
       description: "Mocked description"
     })
-  }, [props.match.params.id]);
+  }, [id]);
 
   if (post) {
     return <Box>
@@ -20,6 +20,6 @@ const PostDetail = (props) => {
   } else {
     return <div>Loading...</div>
   }
-}
+};
 
 export default PostDetail;
