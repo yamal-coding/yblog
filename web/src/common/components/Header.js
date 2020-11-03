@@ -13,6 +13,7 @@ const useStyles = createUseStyles({
         padding: '20px'
     },
     logo: {
+        margin: '5px',
         width: '100px',
         height: '100px'
     },

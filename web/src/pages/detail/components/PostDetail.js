@@ -8,17 +8,21 @@ const PostDetail = ({id}) => {
     setPost({
       id: id,
       title: "Mocked title",
-      description: "Mocked description"
+      description: "Mocked description",
+      date: "27/10/2020"
     })
   }, [id]);
 
   if (post) {
-    return <Box>
-      <h2>{post.title} (id {post.id})</h2>
-      <p>{post.description}</p>
-    </Box>;
+    return <div>
+      <Box>
+        <h3>{post.title} (id {post.id})</h3> 
+        <p>{post.date}</p>
+        <p>{post.description}</p>
+      </Box>
+    </div>;
   } else {
-    return <div>Loading...</div>
+    return <div/>
   }
 };
 
