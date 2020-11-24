@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../../common/components/Header';
 import PostDetail from './components/PostDetail';
 import '../../common/styles/Page.css';

@@ -10,6 +10,7 @@ ReactDOM.render(
   <Router>
     <div>
       <Route exact path="/" component={Home} />
+      <Route exact path="/yblog" component={Home} />
       <Route path="/:id" component={Detail} />
     </div>
   </Router>,
