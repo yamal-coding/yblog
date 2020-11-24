@@ -17,7 +17,7 @@ const PostPreview = ({id, title, description}) => {
     <strong>{title}</strong>
     <p>{description}</p>
     <div className={classes.link}>
-      <Link to={`/${id}`}>See full post</Link>
+      <Link to={`/detail/${id}`}>See full post</Link>
     </div>
   </Box>;
 };

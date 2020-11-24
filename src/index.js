@@ -8,11 +8,11 @@ import Home from './pages/home';
 
 ReactDOM.render(
   <Router>
-    <div>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/yblog" component={Home} />
-      <Route path="/:id" component={Detail} />
-    </div>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/yblog" component={Home} />
+        <Route path="/detail/:id" component={Detail} />
+      </div>
   </Router>,
   document.getElementById('root')
 );
