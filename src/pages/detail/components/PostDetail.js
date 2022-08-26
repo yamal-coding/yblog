@@ -5,12 +5,10 @@ const PostDetail = ({id}) => {
   const [post, setPost] = useState(null)
 
   useEffect(() => {
-    setPost({
-      id: id,
-      title: "Mocked title",
-      description: "Mocked description",
-      date: "27/10/2020"
-    })
+    try {
+      const data = require('../../../posts/post_' + id + '.json')
+      setPost(data)
+    } catch (error) { }
   }, [id]);
 
   if (post) {
@@ -18,7 +16,8 @@ const PostDetail = ({id}) => {
       <Box>
         <h3>{post.title} (id {post.id})</h3> 
         <p>{post.date}</p>
-        <p>{post.description}</p>
+        <p>{post.shortDescription}</p>
+        <p>{post.content}</p>
       </Box>
     </div>;
   } else {
